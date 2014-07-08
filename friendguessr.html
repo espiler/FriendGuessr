@@ -1,0 +1,81 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <title>FriendGuessr</title>
+</head>
+
+<body>
+  <div class="container">
+
+    {{> hello}}
+
+    {{> logIn}}
+
+    {{> difficulty}}
+
+    {{> friendPost}}
+
+    {{> total}}
+
+    {{> score}}
+
+    {{> scoreDB}}
+
+  </div>
+</body>
+
+
+
+<template name="hello">
+  <div class="title">
+    <h1>FriendGuessr!</h1>
+    <br/>
+    <h2>Which of your friends posted this?</h2>
+  </div>
+</template>
+
+<template name="logIn">
+  <div id="logButton">
+    <ul class="name">
+      <li class="navbar-text">
+        {{> loginButtons}}
+      </li>
+    </ul>
+  </div>
+</template>
+
+<template name="friendPost">
+	<br/><br/><br/>
+	<div id="thePost" class="tweet">
+    <h3>5 Right to Win! </h3>
+    <h5> Sign in with Twitter to Play</h5>
+  </div>
+  <div id="postScore"></div><br/> 
+  <div id="playAnother"></div>
+	<br/><br/>
+	<div id="multiple-choice"></div>
+</template>
+
+<template name="total">
+  <br/>
+	<h4>{{totalRight}} {{totalWrong}}</h4>
+</template>
+
+<template name="score">
+	<h4>{{highScore}}</h4>
+</template>
+
+<template name="scoreDB">
+  <div id="highScore"></div>
+</template>
+
+<template name="difficulty">
+  <br/>
+  <div id="levelSelect">
+    <ul class="difficulty nav nav-pills nav-stacked">
+      <li id="easy"><a> Easy </a></li>
+      <li class="active" id="medium"><a> Medium </a></li>
+      <li id="hard"><a> Hard </a></li>
+    </ul>
+  </div>
+</template>
+
